@@ -7,7 +7,7 @@ public class Main {
         String playAgain;
         boolean done = false; //reused for all do-while loops
         do {
-            System.out.println("User 1, enter move: [RPS]");
+            System.out.println("User 1, enter move: [R/P/S]");
             do {
                 user1 = in.nextLine();
                 if (user1.equalsIgnoreCase("R")) {
@@ -18,11 +18,11 @@ public class Main {
                     done = true;
                 }
                 else {
-                    System.out.println("Error, enter a valid move [RPS] and try again.");
+                    System.out.println("Error, enter a valid move [R/P/S] and try again.");
                 }
             } while (!done);
             done = false;
-            System.out.println("User 2, enter move: [RPS]");
+            System.out.println("User 2, enter move: [R/P/S]");
             do {
                 user2 = in.nextLine();
                 if (user2.equalsIgnoreCase("R")) {
@@ -33,30 +33,35 @@ public class Main {
                     done = true;
                 }
                 else {
-                    System.out.println("Error, enter a valid move [RPS] and try again.");
+                    System.out.println("Error, enter a valid move [R/P/S] and try again.");
                 }
             } while (!done);
             done = false;
+//            Rock breaks Scissors,
+//                    Paper covers Rock,
+//            Scissors cuts Paper
+//            and indicate the winner (Player A wins) or
+//            Rock vs Rock it’s a Tie!  Etc…
                 if (user1.equalsIgnoreCase("R")) {
                     if (user2.equalsIgnoreCase("R")) {
-                        System.out.println("Both players chose rock; It's a tie!");
+                        System.out.println("Rock vs Rock, it's a tie!");
                     } else if (user2.equalsIgnoreCase("P")) {
-                        System.out.println("Paper covers rock, player 2 wins!");
-                    } else System.out.println("Rock beats scissors, player 1 wins!");
+                        System.out.println("Paper covers Rock, Player 2 wins!");
+                    } else System.out.println("Rock breaks Scissors, Player 1 wins!");
                 } else if (user1.equalsIgnoreCase("P")) {
                     if (user2.equalsIgnoreCase("R")) {
-                        System.out.println("Paper covers rock, player 1 wins!");
+                        System.out.println("Paper covers Rock, Player 1 wins!");
                     } else if (user2.equalsIgnoreCase("P")) {
-                        System.out.println("Both players chose paper, it's a tie!");
-                    } else System.out.println("Scissors cut paper, player 2 wins!");
+                        System.out.println("Paper vs paper, it's a tie!");
+                    } else System.out.println("Scissors cut Paper, Player 2 wins!");
                 } else {
                     if (user2.equalsIgnoreCase("R")) {
-                        System.out.println("Rock beats scissors, player 2 wins!");
+                        System.out.println("Rock breaks Scissors, Player 2 wins!");
                     } else if (user2.equalsIgnoreCase("P")) {
-                        System.out.println("Scissors cut paper, player 1 wins!");
-                    } else System.out.println("Both players chose scissors, it's a tie!");
+                        System.out.println("Scissors cut Paper, Player 1 wins!");
+                    } else System.out.println("Scissors vs Scissors, it's a tie!");
                 }
-                System.out.println("Play again? [YN]");
+                System.out.println("Play again? [Y/N]");
                 do {
                     playAgain = in.nextLine();
                     if (playAgain.equalsIgnoreCase("N")) {
