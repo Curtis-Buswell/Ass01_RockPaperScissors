@@ -37,11 +37,6 @@ public class Main {
                 }
             } while (!done);
             done = false;
-//            Rock breaks Scissors,
-//                    Paper covers Rock,
-//            Scissors cuts Paper
-//            and indicate the winner (Player A wins) or
-//            Rock vs Rock it’s a Tie!  Etc…
                 if (user1.equalsIgnoreCase("R")) {
                     if (user2.equalsIgnoreCase("R")) {
                         System.out.println("Rock vs Rock, it's a tie!");
