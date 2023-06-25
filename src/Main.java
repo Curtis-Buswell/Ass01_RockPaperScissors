@@ -10,14 +10,11 @@ public class Main {
             System.out.println("User 1, enter move: [R/P/S]");
             do {
                 user1 = in.nextLine();
-                if (user1.equalsIgnoreCase("R")) {
+                if ((user1.equalsIgnoreCase("R"))
+                        || (user1.equalsIgnoreCase("P"))
+                        || (user1.equalsIgnoreCase("S"))) {
                     done = true;
-                } else if (user1.equalsIgnoreCase("P")) {
-                    done = true;
-                } else if (user1.equalsIgnoreCase("S")) {
-                    done = true;
-                }
-                else {
+                } else {
                     System.out.println("Error, enter a valid move [R/P/S] and try again.");
                 }
             } while (!done);
@@ -25,11 +22,9 @@ public class Main {
             System.out.println("User 2, enter move: [R/P/S]");
             do {
                 user2 = in.nextLine();
-                if (user2.equalsIgnoreCase("R")) {
-                    done = true;
-                } else if (user2.equalsIgnoreCase("P")) {
-                    done = true;
-                } else if (user2.equalsIgnoreCase("S")) {
+                if (user2.equalsIgnoreCase("R")
+                        || (user2.equalsIgnoreCase("S"))
+                        || (user2.equalsIgnoreCase("P"))) {
                     done = true;
                 }
                 else {
